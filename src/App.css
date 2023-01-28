@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  width: 100vw;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  padding: 5px;
+}
+input:focus {
+  outline-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
+  list-style: none;
+}
+
+.navbar-area {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.navbar-area .logo-box {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.navbar-area .logo-box .logo-img {
+  width: 60px;
+  cursor: pointer;
+}
+.navbar-area .btn-con {
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar-area .btn-con .btn-box {
+  display: flex;
+  align-items: center;
+  margin: 0 10px 20px;
+  cursor: pointer;
+}
+.navbar-area .btn-con .btn-box img {
+  width: 20px;
+}
+.navbar-area .btn-con .btn-box span {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0 15px 0 5px;
+}
+.navbar-area .menu-area {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 35px 25%;
+}
+.navbar-area .menu-area li {
+  cursor: pointer;
+}
+
+.card-area {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 10px 5px;
+}
+.card-area img {
+  width: 100%;
+  margin: auto;
+}
+.card-area .info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 8px 10px;
+  height: 80px;
+}
+.card-area .info-box .title {
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-area .info-box .price {
+  font-size: 15px;
+}
+.card-area .info-box .choice {
+  font-size: 12px;
+}
+.card-area .info-box .new {
+  font-size: 12px;
+}
+
+.login-area {
+  display: flex;
+  margin: 5% 35%;
+  border: 2px solid lightgray;
+  border-radius: 8px;
+}
+.login-area form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+}
+.login-area form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 8px 0;
+  height: 60px;
+}
+.login-area form .login-submit-btn {
+  width: 100px;
+  height: 35px;
+  margin: 8px 0;
   color: white;
+  border: none;
+  border-radius: 3px;
+  background-color: #dc1b1b;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+.login-area form .login-submit-btn:hover {
+  background-color: #ed4343;
 }
 
-.App-link {
-  color: #61dafb;
+.all-area {
+  width: auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.all-area .search-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+}
+.all-area .search-box img {
+  width: 20px;
+  height: 20px;
+}
+.all-area .search-box input {
+  height: 20px;
+  margin-left: 5px;
+  font-size: 15px;
+  border: none;
+  border-bottom: 2px solid lightgray;
+}
+.all-area .product-cards-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: auto;
+  margin: 8% 15%;
 }
