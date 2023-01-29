@@ -1,38 +1,39 @@
 .card-area {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 10px 5px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    margin: auto;
+  }
+
+  .info-box {
     display: flex;
     flex-direction: column;
-    width: auto;
-    margin: 10px 5px;
-    
-    img {
-        width: 100%;
-        margin: auto;
+    justify-content: space-between;
+    margin: 8px 10px;
+    height: 80px;
+
+    .title {
+      height: 16px;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
-    .info-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 8px 10px;
-        height: 80px;
-        
-        
-        .title {
-            font-size: 15px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .price {
-            font-size: 15px;
-        }
-
-        .choice {
-            font-size: 12px;
-        }
-
-        .new {
-            font-size: 12px;
-        }
+    .price {
+      font-size: 15px;
     }
+
+    .choice {
+      font-size: 12px;
+    }
+
+    .new {
+      font-size: 12px;
+    }
+  }
 }

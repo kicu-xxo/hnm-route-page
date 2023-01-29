@@ -8,16 +8,19 @@ html {
   height: 100vh;
   background-color: #faf9f8;
 }
-
-input {
+html input {
   padding: 5px;
 }
-input:focus {
+html input:focus {
   outline-style: none;
 }
-
-li {
+html li {
   list-style: none;
+}
+html select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .navbar-area {
@@ -67,6 +70,7 @@ li {
   flex-direction: column;
   width: auto;
   margin: 10px 5px;
+  cursor: pointer;
 }
 .card-area img {
   width: 100%;
@@ -80,9 +84,10 @@ li {
   height: 80px;
 }
 .card-area .info-box .title {
-  font-size: 15px;
-  overflow: hidden;
+  height: 16px;
+  font-size: 14px;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 .card-area .info-box .price {
   font-size: 15px;
@@ -230,6 +235,7 @@ li {
   margin: 20px 0;
   padding: 30px 15px;
   background-color: white;
+  cursor: pointer;
 }
 .my-page-area .purchase-list-con .purchase-box .date {
   font-size: 10px;
@@ -260,10 +266,52 @@ li {
   font-size: 15px;
   border: none;
   border-bottom: 2px solid lightgray;
+  background-color: #faf9f8;
 }
 .all-area .product-cards-area {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: auto;
   margin: 8% 15%;
+}
+
+.product-details-con {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 5% 0;
+}
+.product-details-con div {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 80px;
+  width: 300px;
+}
+.product-details-con div .product-title {
+  margin: 10px 0;
+  font-size: 20px;
+}
+.product-details-con div .product-price {
+  margin: 10px 0;
+}
+.product-details-con div select {
+  height: 30px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+.product-details-con div select:focus {
+  outline: none;
+}
+.product-details-con div select .checked {
+  display: none;
+}
+.product-details-con div select option {
+  background-color: lightgray;
+}
+.product-details-con div button {
+  margin: 20px 0;
+  height: 30px;
+  color: wheat;
+  background-color: black;
+  cursor: pointer;
 }

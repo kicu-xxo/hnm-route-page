@@ -1,6 +1,9 @@
 import React from "react";
 
+
 const MyPage = () => {
+
+  //map 적용할 menuList
   const menuList = [
     {
       id: 0,
@@ -49,7 +52,7 @@ const MyPage = () => {
       {/* info-container */}
       <div className="info-con">
         <div className="user-info-box">
-          <span>안녕하세요, 유진 님</span>
+          <span>안녕하세요, 사용자 님</span>
           <img src="https://cdn-icons-png.flaticon.com/512/126/126548.png"></img>
         </div>
 

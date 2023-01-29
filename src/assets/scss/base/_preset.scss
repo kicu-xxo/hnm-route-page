@@ -7,16 +7,24 @@ html {
     width: 100vw;
     height: 100vh;
     background-color: #faf9f8;
-}
 
-input {
-    padding: 5px;
+    input {
+        padding: 5px;
+    
+        &:focus {
+            outline-style: none;
+        }
+    }
+    
+    li {
+        list-style: none;
+    }
 
-    &:focus {
-        outline-style: none;
+    select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
     }
 }
 
-li {
-    list-style: none;
-}
+

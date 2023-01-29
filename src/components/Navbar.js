@@ -1,25 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
-    const menuList = [
-        "여성",
-        "Divided",
-        "남성",
-        "신생아/유아",
-        "아동",
-        "H&M HOME",
-        "스포츠",
-        "Sale",
-        "지속가능성"
-    ]
+const Navbar = ({ authenticate, setAuthenticate }) => {
+  const menuList = [
+    "여성",
+    "Divided",
+    "남성",
+    "신생아/유아",
+    "아동",
+    "H&M HOME",
+    "스포츠",
+    "Sale",
+    "지속가능성",
+  ];
+
   const navigate = useNavigate();
+
+  const login = () => {
+    authenticate ? setAuthenticate(false) : navigate("/login");
+  };
 
   const goMain = () => {
     navigate("/");
-  };
-  const goLogin = () => {
-    navigate("/login");
   };
 
   const goMyPage = () => {
@@ -33,9 +35,9 @@ const Navbar = () => {
           <img src="https://cdn-icons-png.flaticon.com/512/2354/2354573.png"></img>
           <span>마이페이지</span>
         </div>
-        <div onClick={goLogin} className="btn-box">
+        <div onClick={login} className="btn-box">
           <img src="https://cdn-icons-png.flaticon.com/512/345/345535.png"></img>
-          <span>로그인</span>
+          <span>{authenticate ? "로그아웃" : "로그인"}</span>
         </div>
       </div>
       <div className="logo-box">
@@ -46,7 +48,9 @@ const Navbar = () => {
         ></img>
       </div>
       <ul className="menu-area">
-        {menuList.map((item) => <li key={item}>{item}</li>)}
+        {menuList.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
       </ul>
     </div>
   );
