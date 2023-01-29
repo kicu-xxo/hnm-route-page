@@ -6,6 +6,7 @@
 html {
   width: 100vw;
   height: 100vh;
+  background-color: #faf9f8;
 }
 
 input {
@@ -127,6 +128,117 @@ li {
 }
 .login-area form .login-submit-btn:hover {
   background-color: #ed4343;
+}
+
+.my-page-area {
+  display: flex;
+  margin: 5% 7%;
+}
+.my-page-area .info-con {
+  width: 500px;
+}
+.my-page-area .info-con .user-info-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.my-page-area .info-con .user-info-box span {
+  font-size: 20px;
+}
+.my-page-area .info-con .user-info-box img {
+  width: 25px;
+  cursor: pointer;
+}
+.my-page-area .info-con .point-box {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #f1ebdf;
+}
+.my-page-area .info-con .point-box .user-point-text {
+  font-size: 25px;
+}
+.my-page-area .info-con .point-box .user-point-text span {
+  font-weight: bold;
+}
+.my-page-area .info-con .point-box input[type=range] {
+  margin: 10px 0;
+  padding: 0;
+  height: 5px;
+  -webkit-appearance: none;
+  background: linear-gradient(to right, #dc1b1b 10%, lightgray 10%);
+  outline: none;
+}
+.my-page-area .info-con .point-box input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: lightgray;
+}
+.my-page-area .info-con .point-box .point-info {
+  font-size: 12px;
+}
+.my-page-area .info-con .point-box .user-id-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 10px;
+  height: 60px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.my-page-area .info-con .point-box .user-id-box img {
+  margin-right: 5px;
+  width: 25px;
+}
+.my-page-area .info-con .info-list-box {
+  margin: 30px 0;
+}
+.my-page-area .info-con .info-list-box li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+.my-page-area .info-con .info-list-box li .menu-item {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.my-page-area .info-con .info-list-box li .menu-item img {
+  width: 25px;
+  margin-right: 8px;
+}
+.my-page-area .info-con .info-list-box li .arrow-ico {
+  width: 15px;
+}
+.my-page-area .info-con .info-list-box li:hover {
+  color: #dc1b1b;
+  text-decoration: underline 1px;
+}
+.my-page-area .info-con .info-list-box li:nth-child(odd) {
+  background-color: white;
+}
+.my-page-area .purchase-list-con {
+  width: 100%;
+  margin: 0 40px;
+}
+.my-page-area .purchase-list-con div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 30px 15px;
+  background-color: white;
+}
+.my-page-area .purchase-list-con .purchase-box .date {
+  font-size: 10px;
+}
+.my-page-area .purchase-list-con .purchase-box img {
+  width: 30px;
+}
+.my-page-area .purchase-list-con .purchase-box .purchase-list-text {
+  font-size: 13px;
 }
 
 .all-area {

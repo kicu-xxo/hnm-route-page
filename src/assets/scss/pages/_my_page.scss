@@ -1,0 +1,143 @@
+.my-page-area {
+  display: flex;
+  margin: 5% 7%;
+
+  //info con
+  .info-con {
+    width: 500px;
+
+    .user-info-box {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      span {
+        font-size: 20px;
+      }
+
+      img {
+        width: 25px;
+        cursor: pointer;
+      }
+    }
+
+    .point-box {
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      background-color: #f1ebdf;
+
+      .user-point-text {
+        font-size: 25px;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      input[type="range"] {
+        margin: 10px 0;
+        padding: 0;
+        height: 5px;
+        -webkit-appearance: none;
+        background: linear-gradient(to right, #dc1b1b 10%, lightgray 10%);
+        outline: none;
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          background: lightgray;
+        }
+      }
+
+      .point-info {
+        font-size: 12px;
+      }
+
+      .user-id-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0 10px;
+        height: 60px;
+        border: 1px solid black;
+        cursor: pointer;
+
+        img {
+          margin-right: 5px;
+          width: 25px;
+        }
+      }
+    }
+
+    .info-list-box {
+      margin: 30px 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 10px;
+        cursor: pointer;
+
+        .menu-item {
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+
+          img {
+            width: 25px;
+            margin-right: 8px;
+          }
+        }
+
+        .arrow-ico {
+          width: 15px;
+        }
+
+        &:hover {
+          color: #dc1b1b;
+          text-decoration: underline 1px;
+        }
+
+        &:nth-child(odd) {
+          background-color: white;
+        }
+      }
+    }
+  }
+  //info-con END
+
+  //purchase-list-con
+  .purchase-list-con {
+    width: 100%;
+    margin: 0 40px;
+    .title {
+
+    }
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+        padding: 30px 15px;
+        background-color: white;
+    }
+
+    .purchase-box {
+
+        .date {
+            font-size: 10px;
+        }
+
+        img {
+            width: 30px;
+        }
+
+        .purchase-list-text {
+            font-size: 13px;
+        }
+    }
+  }
+  //purchase-list-con ENS
+}
