@@ -70,7 +70,11 @@ html select {
   flex-direction: column;
   width: auto;
   margin: 10px 5px;
+  transition: all 0.1s;
   cursor: pointer;
+}
+.card-area:hover {
+  transform: scale(1.08);
 }
 .card-area img {
   width: 100%;
