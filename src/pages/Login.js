@@ -1,7 +1,6 @@
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({ setAuthenticate }) => {
+const Login = ({ userName, setUserName, setAuthenticate }) => {
   const navigate = useNavigate();
 
   //로그인(submit)하면 로그인 상태로 바뀌기 + 메인 페이지로 이동
@@ -9,6 +8,8 @@ const Login = ({ setAuthenticate }) => {
     event.preventDefault();
     setAuthenticate(true);
     navigate("/");
+    setUserName(event.target[0].value);
+    console.log({ userName });
   };
 
   return (

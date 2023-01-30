@@ -64,6 +64,24 @@ html select {
 .navbar-area .menu-area li {
   cursor: pointer;
 }
+.navbar-area .search-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+}
+.navbar-area .search-box img {
+  width: 20px;
+  height: 20px;
+}
+.navbar-area .search-box input {
+  height: 20px;
+  margin-left: 5px;
+  font-size: 15px;
+  border: none;
+  border-bottom: 2px solid lightgray;
+  background-color: #faf9f8;
+}
 
 .card-area {
   display: flex;
@@ -253,24 +271,6 @@ html select {
 
 .all-area {
   width: auto;
-}
-.all-area .search-box {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 20px;
-}
-.all-area .search-box img {
-  width: 20px;
-  height: 20px;
-}
-.all-area .search-box input {
-  height: 20px;
-  margin-left: 5px;
-  font-size: 15px;
-  border: none;
-  border-bottom: 2px solid lightgray;
-  background-color: #faf9f8;
 }
 .all-area .product-cards-area {
   display: grid;

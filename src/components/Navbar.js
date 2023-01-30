@@ -28,6 +28,14 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
     navigate("/myPage");
   };
 
+  const search = (event) => {
+    let keyword = event.target.value;
+
+    if (event.code === "Enter") {
+      navigate(`/?q=${keyword}`);
+    }
+  };
+
   return (
     <div className="navbar-area">
       <div className="btn-con">
@@ -52,6 +60,14 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
           <li key={item}>{item}</li>
         ))}
       </ul>
+      <div className="search-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149852.png"></img>
+        <input
+          type="text"
+          placeholder="제품 검색"
+          onKeyDown={(event) => search(event)}
+        ></input>
+      </div>
     </div>
   );
 };
