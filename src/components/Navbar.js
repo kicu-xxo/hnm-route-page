@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { authenticateAction } from "../redux/actions/authenticateAction";
 
 const Navbar = () => {
@@ -19,7 +18,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const authenticate = useSelector((state) => state.auth.authenticate);
-  console.log(authenticate);
+  // console.log(authenticate);
 
   const login = () => {
     authenticate ? dispatch(authenticateAction.logout()) : navigate("/login");
