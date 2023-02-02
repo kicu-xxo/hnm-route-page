@@ -8,29 +8,14 @@ import ProductDetails from "./pages/ProductDetails";
 import Private from "./route/Private";
 
 function App() {
-  const [authenticate, setAuthenticate] = useState(false);
-  const [userName, setUserName] = useState("");
-
   return (
     <div>
-      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
+      <Navbar />
       <Routes>
         <Route path="/" element={<ProductAll />}></Route>
-        <Route
-          path="/login"
-          element={
-            <Login
-              setAuthenticate={setAuthenticate}
-              userName={userName}
-              setUserName={setUserName}
-            />
-          }
-        ></Route>
+        <Route path="/login" element={<Login />}></Route>
         <Route path="/product/:id" element={<ProductDetails />}></Route>
-        <Route
-          path="/myPage"
-          element={<Private authenticate={authenticate} userName={userName}/>}
-        ></Route>
+        <Route path="/myPage" element={<Private />}></Route>
       </Routes>
     </div>
   );

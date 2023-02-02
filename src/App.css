@@ -283,11 +283,15 @@ html select {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 5% 0;
+  padding: 5% 0;
+}
+.product-details-con img {
+  width: 25%;
 }
 .product-details-con div {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 100px 80px;
   width: 300px;
 }
@@ -315,7 +319,12 @@ html select {
 .product-details-con div button {
   margin: 20px 0;
   height: 30px;
-  color: wheat;
+  color: white;
+  border: none;
   background-color: black;
+  transition: all 0.3s;
   cursor: pointer;
+}
+.product-details-con div button:hover {
+  background-color: #515151;
 }

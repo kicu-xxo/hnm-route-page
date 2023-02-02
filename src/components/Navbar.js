@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { authenticateAction } from "../redux/actions/authenticateAction";
 
-const Navbar = ({ authenticate, setAuthenticate }) => {
+const Navbar = () => {
   const menuList = [
     "여성",
     "Divided",
@@ -14,10 +16,13 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
     "지속가능성",
   ];
 
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const authenticate = useSelector((state) => state.auth.authenticate);
+  console.log(authenticate);
 
   const login = () => {
-    authenticate ? setAuthenticate(false) : navigate("/login");
+    authenticate ? dispatch(authenticateAction.logout()) : navigate("/login");
   };
 
   const goMain = () => {

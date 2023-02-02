@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 
-const MyPage = ({ userName }) => {
+const MyPage = () => {
   //map 적용할 menuList
+  const username = useSelector((state) => state.auth.id);
   const menuList = [
     {
       id: 0,
@@ -45,16 +47,12 @@ const MyPage = ({ userName }) => {
     },
   ];
 
-  useEffect(()=>{
-    console.log({userName});
-  },[])
-
   return (
     <div className="my-page-area">
       {/* info-container */}
       <div className="info-con">
         <div className="user-info-box">
-          <span>안녕하세요, {userName} 님</span>
+          <span>안녕하세요, {username} 님</span>
           <img src="https://cdn-icons-png.flaticon.com/512/126/126548.png"></img>
         </div>
 
