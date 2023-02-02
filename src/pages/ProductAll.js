@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import { productAction } from "../redux/actions/productAction";
+import { useDispatch, useSelector } from "react-redux";
 
 const ProductAll = () => {
-  const [productList, setProductList] = useState([]);
+  const productList = useSelector((state) => state.productList);
   const [query, setQuery] = useSearchParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   //db.jon 불러오는 함수
-  const getProducts = async () => {
+  const getProducts = () => {
     let searchQuery = query.get("q") || "";
-    console.log(searchQuery);
-    let url = `https://my-json-server.typicode.com/kicu-xxo/hnm-route-page/products?q=${searchQuery}`;
-    let response = await fetch(url);
-    let data = await response.json();
-    // console.log('data?', data);
-    setProductList(data);
+    // console.log(searchQuery);
+
+    //바로 store로 가는 것이 아니라 productAction의 getProducts 함수를 거쳐서 감
+    dispatch(productAction.getProducts(searchQuery));
   };
 
   useEffect(() => {
     getProducts();
   }, [query]);
-
- 
 
   return (
     <div className="all-area">
